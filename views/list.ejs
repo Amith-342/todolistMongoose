@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link  href="/css/styles.css" rel="stylesheet">
+    <title>To-do-list</title>
+</head>
+<body>
+
+<!-- <%if(kindofDay === "Saturday" || kindofDay === "Sunday"){%>
+
+        <h1 style="color:green;">It's a <%= kindofDay %>.</h1>
+
+<%}else{%>
+
+    <h1 style="color:red;">It's a <%= kindofDay %>.</h1>
+<%}%> -->
+
+<h1><%=kindofDay%></h1>
+
+
+<div class="the-box">
+
+
+<div>
+<ul>
+    <form action="/delete" method="post">
+    <% for(var i=0;i<j.length;i++){%>
+     <li class="items"><input onclick="this.form.submit()" name="checkBox" value="<%=j[i]._id %>" class="chkBox" type="checkbox"> <%= j[i].job %> </li>
+     <%}%>
+    </form>
+ </ul>
+</div>
+
+<form action="/" method="post" class="sub-inp">
+    <input class="input" type="text" name = "joba">
+    <button type="submit">Add item</button> 
+</form>
+
+
+</div>
+
+
+    
+</body>
+</html>
